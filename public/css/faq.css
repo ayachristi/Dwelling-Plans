@@ -1,0 +1,72 @@
+.faq_body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("/img/home_back.png");
+    background-size: cover;
+    padding-top: 1px;
+    margin-top: 10px;
+}
+
+.faq_head {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+}
+.header_faq {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#faq_margin {
+    margin-top: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.a_faq {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.a_faq:hover {
+    color: #757575;
+}
+
+section#projects {
+    padding: 20px;
+    text-align: center;
+}
+
+.project {
+    margin: 20px;
+}
+
+.project img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.dwelling_welcome {
+    text-align: justify;
+    font-size: 22px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,81 @@
+#sa-dashboard-page {
+    /* background-color: red; */
+    height: 100vh;
+    position: relative;
+}
+
+#sa-dashboard-page .left {
+    background-color: var(--mid-gray);
+    width: 100%;
+    height: 35vh;
+    position: relative;
+    border-radius: 30px;
+}
+
+#sa-dashboard-page .right {
+    background-color: var(--mid-gray);
+    width: 100%;
+    height: 35vh;
+    border-radius: 30px;
+}
+
+#sa-dashboard-page .statistics-container {
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+#sa-dashboard-page .left .statistics-container .row {
+    height: 100%;
+    position: relative;
+}
+
+#sa-dashboard-page .left .statistics-container .row .separator {
+    width: 4px;
+    height: 100%;
+    background-color: var(--dark-gray);
+}
+
+#sa-dashboard-page .left .statistics-container img {
+    width: 50px;
+}
+
+#sa-dashboard-page .right .right-chart {
+    /* background-color: yellow; */
+    height: 100%;
+}
+
+#sa-dashboard-page .bar-chart {
+    /* background-color: aqua; */
+    width: 750px;
+    height: 55%;
+    margin-bottom: 0;
+    position: relative;
+    margin: auto;
+}
+
+#sa-dashboard-page .bar-chart .bottom-chart {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#sa-dashboard-page .bar-chart .bottom-chart #bottomChart {
+    background-color: transparent !important;
+}
+
+@media only screen and (max-width: 992px) {
+    #sa-dashboard-page .left .statistics-container .row .separator {
+        width: 100%;
+        height: 4px;
+    }
+
+    #sa-dashboard-page .left .statistics-container .pt-4 {
+        padding-top: 10px !important;
+    }
+}

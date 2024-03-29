@@ -1,0 +1,433 @@
+.login-page {
+    background-color: var(--light);
+    font-family: var(--text);
+    margin: 0;
+}
+
+.login-page .login-container {
+    /* transform: translateY(25%); */
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 850px;
+    height: 500px;
+    background-color: var(--white);
+    position: absolute;
+    border-radius: 30px;
+}
+
+#login_margin {
+    margin-top: 120px;
+}
+
+.auth-submit-btn {
+    /* border-color: var(--white);
+    border: 2px solid;
+    background-color: transparent; */
+    border: none;
+    background-color: var(--blue-green);
+    color: var(--white);
+    width: 180px;
+    height: 34px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* ----------------- Left -------------------- */
+
+.login-container .login-left .login-container {
+    /* background-color: yellowgreen; */
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.login-container .login-left .login-container .form-wrapper {
+    /* background-color: yellow; */
+    position: absolute;
+    left: 10%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 35%;
+    height: 90%;
+}
+
+.login-container .login-left .login-container .form-wrapper.active {
+    animation: 0.5s login-form-going-left linear forwards;
+}
+
+@keyframes login-form-going-left {
+    from {
+        transform: translateX(0);
+        display: block;
+        opacity: 1;
+    }
+    to {
+        transform: translateX(25%);
+        display: none;
+        opacity: 0;
+    }
+}
+
+.login-container .login-left .login-container .form-wrapper.unactive {
+    animation: 0.5s login-form-going-right linear forwards;
+}
+
+@keyframes login-form-going-right {
+    from {
+        transform: translateX(25%);
+        display: none;
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        display: block;
+        opacity: 1;
+    }
+}
+
+.login-page .form-control {
+    height: 10px;
+}
+
+.login-container h4 {
+    font-family: var(--brand-font);
+    font-size: 34px;
+}
+
+/* ----------------- Right ------------------- */
+.login-container .login-right {
+    width: 400px;
+    height: 100%;
+    /* background-color: goldenrod; */
+    position: absolute;
+    right: 0;
+    border-radius: 30px;
+}
+
+.login-container .login-right .img-bg button {
+    border-color: var(--white);
+    border: 2px solid;
+    background-color: transparent;
+    width: 180px;
+    height: 34px;
+    font-weight: bold;
+}
+
+.login-container .login-right .signup-container {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: absolute;
+}
+
+.login-container .login-right .signup-container .signup-form-wrapper {
+    width: 35%;
+    height: 90%;
+    right: 10%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    /* background-color: yellowgreen; */
+    position: absolute;
+    transform: translateX(-25%);
+}
+
+.login-container .login-right .signup-container .signup-form-wrapper.active {
+    animation: 0.5s signup-form-going-left linear forwards;
+}
+
+@keyframes signup-form-going-left {
+    from {
+        transform: translateX(0);
+        display: block;
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-40%);
+        display: none;
+        opacity: 0;
+    }
+}
+
+.login-container .login-right .signup-container .signup-form-wrapper.unactive {
+    animation: 0.5s signup-form-going-right linear forwards;
+}
+
+@keyframes signup-form-going-right {
+    from {
+        transform: translateX(-40%);
+        display: none;
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        display: block;
+        opacity: 1;
+    }
+}
+
+.login-container .login-right.toggle-left {
+    animation: 0.5s toggle-left linear forwards;
+}
+
+@keyframes toggle-left {
+    from {
+        width: 400px;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.login-container .login-right.toggle-right {
+    animation: 0.5s toggle-right linear forwards;
+}
+
+@keyframes toggle-right {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 400px;
+    }
+}
+
+.login-container .login-right .img-bg {
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    border-radius: 100px 30px 30px 200px;
+}
+
+.login-container .login-right .img-bg.active {
+    animation: 0.5s img-bg-right linear forwards;
+}
+
+@keyframes img-bg-right {
+    from {
+        border-radius: 30px 200px 100px 30px;
+    }
+
+    to {
+        border-radius: 100px 30px 30px 200px;
+    }
+}
+
+.login-container .login-right .img-bg.unactive {
+    animation: 0.5s img-bg-left linear forwards;
+}
+
+@keyframes img-bg-left {
+    from {
+        border-radius: 100px 30px 30px 200px;
+    }
+
+    to {
+        border-radius: 30px 200px 100px 30px;
+    }
+}
+
+.login-container .login-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    filter: brightness(50%);
+    /* filter: contrast(80%); */
+    /* background-color: var(--blue-green); */
+}
+
+.login-container .login-right .toggle-buttons {
+    position: absolute;
+    /* background-color: yellow; */
+    bottom: 20%;
+    width: 170%;
+    transform: translateX(-53%);
+}
+
+.login-container .login-right .toggle-buttons.going-right {
+    animation: 0.5s going-right linear forwards;
+}
+
+@keyframes going-right {
+    from {
+        transform: translateX(-53%);
+    }
+    to {
+        transform: translateX(15%);
+    }
+}
+
+.login-container .login-right .toggle-buttons.going-left {
+    animation: 0.5s going-left linear forwards;
+}
+
+@keyframes going-left {
+    from {
+        transform: translateX(15%);
+    }
+    to {
+        transform: translateX(-53%);
+    }
+}
+
+.login-container .login-right .toggleSignIn {
+    opacity: 1;
+}
+
+.login-container .login-right .toggleSignIn.active {
+    animation: 0.5s signin-btn-active linear forwards;
+}
+
+@keyframes signin-btn-active {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.login-container .login-right .toggleSignIn.unactive {
+    animation: 0.5s signin-btn-unactive linear forwards;
+}
+
+@keyframes signin-btn-unactive {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.login-container .login-right .toggleSignUp {
+    opacity: 1;
+}
+
+.login-container .login-right .toggleSignUp.active {
+    animation: 0.5s signup-btn-active linear forwards;
+}
+
+@keyframes signup-btn-active {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.login-container .login-right .toggleSignUp.unactive {
+    animation: 0.5s signup-btn-unactive linear forwards;
+}
+
+@keyframes signup-btn-unactive {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.login-page .signup-banner {
+    position: absolute;
+    /* background-color: blue; */
+    bottom: 50%;
+    width: 190%;
+    transform: translateX(-50%);
+    color: var(--white);
+}
+
+.login-page .signup-banner .first {
+    /* background-color: aqua; */
+    width: 40%;
+    font-family: var(--brand-font);
+    font-size: 24px;
+}
+
+.login-page .signup-banner .second ul {
+    list-style: none;
+}
+
+.login-page .signup-banner .second {
+    /* background-color: aqua; */
+    /* width: 40%; */
+    font-family: var(--brand-font);
+    font-size: 24px;
+}
+
+.login-page .signup-banner.banner-going-right {
+    animation: 0.5s banner-going-right linear forwards;
+}
+
+@keyframes banner-going-right {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(5%);
+    }
+}
+
+.login-page .signup-banner.banner-going-left {
+    animation: 0.5s banner-going-left linear forwards;
+}
+
+@keyframes banner-going-left {
+    from {
+        transform: translateX(5%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .login-page .login-container {
+        /* transform: translateY(25%); */
+        /* width: 850px;
+        height: 500px; */
+        width: 80%;
+        height: 40%px;
+    }
+
+    .login-container .login-left .login-container .form-wrapper {
+        background-color: yellow;
+        position: absolute;
+        left: 10%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 35%;
+        height: 90%;
+    }
+
+    .login-container .login-right {
+        width: 50%;
+        height: 100%;
+        background-color: goldenrod;
+        position: absolute;
+        right: 0;
+        border-radius: 30px;
+    }
+
+    .login-container .login-right .img-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        overflow: hidden;
+        border-radius: 100px 30px 30px 200px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+}

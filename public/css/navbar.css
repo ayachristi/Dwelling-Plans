@@ -1,0 +1,400 @@
+.navbar .container-fluid {
+    background-color: var(--dark-gray);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    padding-bottom: 15px;
+}
+
+.navbar-brand img {
+    width: 100px;
+    margin-left: 30px;
+}
+
+/* #logo_pos {
+    margin-left: 30px;
+    width: 150px;
+    height: 80px;
+    margin-bottom: -10px;
+} */
+
+.navbar .right {
+    position: absolute;
+    right: 150px;
+    width: 150px;
+}
+
+#nav_names {
+    color: var(--light);
+}
+.navbar-nav {
+    color: var(--light);
+}
+.navbar .right.second {
+    position: absolute;
+    right: 25px !important;
+    width: 150px;
+}
+
+.navbar .right-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    transform: translateY(8px);
+    margin-right: 50%;
+    left: 0;
+}
+
+.navbar .right-links li {
+    color: var(--light);
+    margin-bottom: -40px;
+}
+
+#nav_names {
+    color: var(--light);
+    margin-bottom: -30px;
+    padding: 30px;
+}
+
+.navbar .profile-settings {
+    display: none;
+}
+
+.navbar .notification {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    right: 125px;
+    top: 35px;
+}
+
+.navbar .notification a {
+    /* background-color: red; */
+    width: 55px;
+    height: 40px;
+}
+
+.navbar .notification img {
+    width: 30px;
+}
+
+.navbar .greet {
+    display: none;
+}
+
+.navbar .profile-set {
+    /* background-color: red; */
+    position: absolute;
+    right: 0;
+    width: 150px;
+}
+
+/* .navbar .profile-set .dropdown-menu {
+    margin-right: 10px;
+} */
+
+.navbar button.profile-pic {
+    border: none;
+    background-color: transparent;
+    transform: translateY(10px);
+}
+
+.navbar button.profile-pic img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+/* login and signup separator */
+
+.navbar .right-links .vertical-bar {
+    width: 2px;
+    height: 20px;
+    background-color: var(--light);
+    margin-top: 3px;
+}
+
+/* burger icon button animation */
+
+.navbar-bg {
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    height: 100vh;
+    /* filter: blur(5px); */
+    /* z-index: 1;
+    background-color: var(--dark-gray);
+    transition: 0.5s linear; */
+}
+
+/* .navbar .extension {
+    background-color: yellow;
+    width: 1px;
+    height: 150px;
+} */
+
+.navbar-tg {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    border: none !important;
+    background-color: transparent !important;
+    outline: none;
+    box-shadow: none;
+    margin-bottom: -30px;
+}
+
+.navbar-tg .top {
+    position: absolute;
+    background-color: var(--light);
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    top: 0;
+    transform: translateX(-12px);
+}
+
+.navbar-tg .top.active {
+    animation: tg-top 0.2s linear forwards;
+}
+
+/* hover */
+.navbar-nav a {
+    text-decoration: none;
+    font-weight: normal;
+
+    transition: color 0.3s;
+}
+
+.navbar-nav a:hover {
+    text-decoration: underline;
+}
+
+.navbar-nav .active {
+    font-weight: bold;
+}
+
+.right-links a {
+    text-decoration: none;
+    font-weight: normal;
+    color: var(--light);
+    transition: color 0.3s;
+}
+
+.right-links a:hover {
+    text-decoration: underline;
+}
+
+@keyframes tg-top {
+    from {
+        top: 0;
+        rotate: 0deg;
+        transform: translateX(-12px);
+    }
+    to {
+        top: 80%;
+        rotate: 35deg;
+        transform: translateX(-15px);
+    }
+}
+
+.navbar-tg .middle {
+    position: absolute;
+    background-color: var(--light);
+    border-radius: 5px;
+    width: 100%;
+    height: 5px;
+    bottom: 40%;
+    transform: translateX(-12px);
+}
+
+.navbar-tg .middle.active {
+    animation: tg-mid 0.2s linear forwards;
+}
+
+@keyframes tg-mid {
+    from {
+        bottom: 40%;
+        rotate: 0deg;
+        transform: translateX(-12px);
+    }
+    to {
+        bottom: 0;
+        rotate: 35deg;
+        transform: translateX(-15px);
+    }
+}
+
+.navbar-tg .bottom {
+    position: absolute;
+    border-radius: 5px;
+    background-color: var(--light);
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    transform: translateX(-12px);
+}
+
+.navbar-tg .bottom.active {
+    animation: tg-bottom 0.2s linear forwards;
+}
+
+@keyframes tg-bottom {
+    from {
+        bottom: 0;
+        rotate: 0deg;
+        transform: translateX(-12px);
+    }
+    to {
+        bottom: 70%;
+        rotate: -35deg;
+        transform: translateX(-15px);
+    }
+}
+
+/* responsive */
+@media only screen and (max-width: 992px) {
+    .navbar .navbar-nav {
+        margin-top: -30px;
+    }
+
+    .navbar-margin-top {
+        margin-top: 30%;
+    }
+
+    .navbar-brand img {
+        margin-top: 10px;
+        width: 78px;
+        margin-left: 20px;
+    }
+
+    .navbar .right {
+        margin: auto;
+        right: 25px;
+        left: 0;
+        bottom: -50px;
+    }
+
+    .navbar .profile-settings {
+        display: flex;
+    }
+
+    .navbar-bg.active {
+        top: 0;
+    }
+
+    .navbar .profile-set {
+        right: 10px;
+        left: 0;
+        margin: auto;
+        top: 20%;
+    }
+
+    .navbar button.profile-pic img {
+        width: 70px;
+    }
+
+    .navbar .sdropdown {
+        pointer-events: none;
+    }
+
+    .navbar .notification {
+        right: 65px;
+        top: 37px;
+    }
+
+    .navbar .notification.deactive {
+        display: none;
+    }
+
+    .navbar .notification img {
+        width: 25px;
+    }
+
+    .navbar .greet {
+        display: block;
+        position: absolute;
+        right: 10px;
+        left: 0;
+        top: 200px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .navbar .greet .notify {
+        transform: translateX(-20px);
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar .greet .notify img {
+        width: 25px;
+    }
+
+    .navbar-bg {
+        z-index: 1;
+        background-color: var(--dark-gray);
+        transition: 0.5s linear;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .navbar .navbar-nav {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .navbar-margin-top {
+        margin-top: 40%;
+    }
+
+    .navbar-brand img {
+        margin-top: 10px;
+        width: 70px;
+        margin-left: 10px;
+    }
+
+    .navbar-tg {
+        top: 0;
+    }
+
+    .navbar .notification {
+        right: 70px;
+        top: 34px;
+    }
+
+    .navbar .right-links li {
+        margin-bottom: 0;
+    }
+
+    /* #logo_pos {
+        margin-bottom: 0px;
+    } */
+
+    /* #nav_names {
+        margin-bottom: 0;
+        padding: 0;
+    } */
+
+    .navbar .navbar-nav {
+        margin-top: 50px;
+    }
+
+    .navbar .greet {
+        display: block;
+        position: absolute;
+        right: 10px;
+        left: 0;
+        top: 40%;
+        margin: auto;
+    }
+
+    .navbar-bg {
+        z-index: 1;
+        background-color: var(--dark-gray);
+        transition: 0.5s linear;
+    }
+}

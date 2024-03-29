@@ -1,0 +1,144 @@
+.container-add_to {
+    padding: 20px;
+    margin-top: 80px;
+    border: 1px;
+}
+
+.addtocart_body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.table_add {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.add_head {
+    text-align: center;
+    font-family: var(--text);
+}
+
+.th_add_to {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    background-color: var(--dark);
+    color: #ffffff;
+}
+
+.td_add_to {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.text-center_add {
+    text-align: end;
+    margin-top: 20px;
+}
+
+.square-button {
+    background-color: transparent;
+    border: 1px solid #343a40;
+    border-radius: 0;
+}
+
+.delete_add_to {
+    display: inline-block;
+    font-size: 1em;
+    color: #808080;
+    background: none;
+    border: none;
+    top: -18px;
+    right: -160px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.table_add thead tr {
+    color: #ffffff;
+    text-align: left;
+}
+
+.table_add tbody tr {
+    border: 1px solid #dddddd;
+}
+
+.table_add tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.total-label {
+    display: block;
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.checkout-btn {
+    background-color: #009879;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.td_add_to {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    position: relative;
+}
+
+.delete-btn .fa-xmark {
+    font-size: 1rem;
+}
+
+.can_del {
+    background-color: black;
+    color: #fff;
+}
+
+.add_footer {
+    padding: 20px;
+}
+@media screen and (max-width: 768px) {
+    .delete_add_to {
+        top: -5px;
+        right: -5px;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container-add_to {
+    display: flex;
+    flex-direction: column;
+    min-height: 60vh;
+}
+
+.container-add_to {
+    flex: 1;
+}
+
+.add_footer {
+    width: 100%;
+    padding: 20px;
+}

@@ -1,0 +1,80 @@
+:root {
+    --text: Arial, sans-serif;
+    --dark: #343a40;
+    --light: #f8f9fa;
+    --white: #ffffff;
+    --dark-gray: #6c757d;
+}
+
+.admin-products {
+    font-family: var(--text);
+    padding: 0 15px;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.admin-products table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.admin-products .tr-head {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.prod.sdropdown button {
+    border: none;
+    background-color: transparent;
+}
+
+.admin-products .add-product {
+    background-color: var(--dark);
+    min-width: 150px;
+    height: 40px;
+    padding-top: 8px;
+    border-radius: 30px;
+    transition: 0.5s linear;
+    cursor: pointer;
+}
+
+.admin-products .add-product a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .admin-products table,
+    .admin-products .add-product,
+    .admin-products .sdropdown {
+        width: 100%;
+    }
+
+    .admin-products table tr .fixed-th,
+    .admin-products table tr .fixed-th-title {
+        width: auto;
+    }
+
+    .admin-products .add-product {
+        width: auto;
+        padding: 8px 15px;
+    }
+
+    .admin-products table,
+    .admin-products .add-product a,
+    .admin-products .sdropdown button {
+        font-size: smaller;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .admin-products table {
+        display: block;
+        overflow-x: auto;
+    }
+}

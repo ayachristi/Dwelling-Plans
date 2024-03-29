@@ -1,0 +1,279 @@
+.content-body {
+    width: 100%;
+}
+
+.sidebar-bg {
+    border-radius: 0 30px 30px 0;
+    width: 255px;
+    /* background-color: red; */
+    height: 100vh;
+    /* animation: 0.5s maximize linear forwards; */
+}
+
+/* @media only screen and (max-width: 992px) {
+
+    .content-body {
+        width: 70%;
+    }
+} */
+
+.sidebar-bg.minimize {
+    animation: 0.5s sidebar-bg-minimize linear forwards;
+}
+
+@keyframes sidebar-bg-minimize {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: -200px;
+    }
+}
+
+.sidebar {
+    border-radius: 0 30px 30px 0;
+    width: 200px;
+    background-color: var(--dark-gray);
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    /* animation: 0.5s maximize linear forwards; */
+}
+
+.sidebar.minimize {
+    animation: 0.5s minimize linear forwards;
+}
+
+@keyframes minimize {
+    from {
+        left: 0;
+    }
+    to {
+        left: -200px;
+    }
+}
+
+/* @keyframes maximize {
+    from {
+        margin-left: -200px;
+    }
+    to {
+        margin-left: 0;
+    }
+} */
+
+/* burger icon button animation */
+
+.sidebar-tg {
+    width: 25px;
+    height: 20px;
+    position: fixed;
+    border: none !important;
+    background-color: transparent !important;
+    outline: none;
+    box-shadow: none;
+    top: 15px;
+    left: 175px;
+    z-index: 2;
+}
+
+.sidebar-tg.minimize {
+    animation: 0.5s sidebar-tg-minimize linear forwards;
+}
+
+@keyframes sidebar-tg-minimize {
+    from {
+        left: 175px;
+    }
+    to {
+        left: 15px;
+    }
+}
+
+.sidebar-tg .top {
+    position: absolute;
+    background-color: var(--light);
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    top: 0;
+    transform: translateX(-12px);
+    animation: 0.2s tg-top linear forwards;
+}
+
+.sidebar-tg .top.active {
+    animation: 0.2s sidebar-tg-top linear forwards;
+}
+
+@keyframes tg-top {
+    from {
+        top: 0;
+        rotate: 0deg;
+        transform: translateX(-12px);
+    }
+    to {
+        top: 80%;
+        rotate: 35deg;
+        transform: translateX(-15px);
+    }
+}
+
+@keyframes sidebar-tg-top {
+    from {
+        top: 80%;
+        rotate: 35deg;
+        transform: translateX(-15px);
+        background-color: var(--light);
+    }
+    to {
+        top: 0;
+        rotate: 0deg;
+        transform: translateX(-12px);
+        background-color: var(--dark-gray);
+    }
+}
+
+.sidebar-tg .middle {
+    position: absolute;
+    background-color: var(--light);
+    border-radius: 5px;
+    width: 100%;
+    height: 5px;
+    bottom: 40%;
+    transform: translateX(-12px);
+    animation: 0.2s tg-mid linear forwards;
+}
+
+.sidebar-tg .middle.active {
+    animation: 0.2s sidebar-tg-middle linear forwards;
+}
+
+@keyframes tg-mid {
+    from {
+        bottom: 40%;
+        rotate: 0deg;
+        transform: translateX(-12px);
+    }
+    to {
+        bottom: 0;
+        rotate: 35deg;
+        transform: translateX(-15px);
+    }
+}
+
+@keyframes sidebar-tg-middle {
+    from {
+        bottom: 0;
+        rotate: 35deg;
+        transform: translateX(-15px);
+        background-color: var(--light);
+    }
+    to {
+        bottom: 40%;
+        rotate: 0deg;
+        transform: translateX(-12px);
+        background-color: var(--dark-gray);
+    }
+}
+
+.sidebar-tg .bottom {
+    position: absolute;
+    border-radius: 5px;
+    background-color: var(--light);
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    transform: translateX(-12px);
+    animation: 0.2s tg-bottom linear forwards;
+}
+
+.sidebar-tg .bottom.active {
+    animation: 0.2s sidebar-tg-bottom linear forwards;
+}
+
+@keyframes tg-bottom {
+    from {
+        bottom: 0;
+        rotate: 0deg;
+        transform: translateX(-12px);
+    }
+    to {
+        bottom: 70%;
+        rotate: -35deg;
+        transform: translateX(-15px);
+    }
+}
+
+@keyframes sidebar-tg-bottom {
+    from {
+        bottom: 70%;
+        rotate: -35deg;
+        transform: translateX(-15px);
+        background-color: var(--light);
+    }
+    to {
+        bottom: 0;
+        rotate: 0deg;
+        transform: translateX(-12px);
+        background-color: var(--dark-gray);
+    }
+}
+
+/* end of burger icon button animation  */
+
+.sidebar .brand-logo img {
+    width: 60px;
+    transform: translateX(2px);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    color: var(--light);
+    width: 75%;
+}
+
+.sidebar ul li h5 {
+    color: var(--light);
+    font-family: var(--brand-font);
+    font-size: 24px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--light);
+    font-family: var(--text);
+}
+
+.sidebar a:hover {
+    color: var(--light);
+    /* color: var(--dark); */
+    font-weight: bold;
+}
+
+.sidebar ul a.active {
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.sidebar .profile .profile-img {
+    width: 75px;
+    height: 75px;
+    /* background-color: aqua; */
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+.sidebar .profile .profile-img img {
+    object-fit: cover;
+    width: auto;
+    width: 75px;
+    height: 75px;
+}
+
+.sidebar .logout {
+    transform: translateX(-6px);
+}

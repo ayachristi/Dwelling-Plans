@@ -1,0 +1,15 @@
+:root {
+    --light: #ececec;
+    --gray: #c0c0c0;
+    --mid-gray: #afb1ae;
+    --dark-gray: #757575;
+    --green-gray: #b2beb5;
+    --dark: #2a3439;
+    --white: #ffffff;
+
+    --blue-green: #2197bd;
+    --blue-green-hover: #48bde3;
+
+    --brand-font: "Vujahday Script", cursive;
+    --text: "Raleway", sans-serif;
+}

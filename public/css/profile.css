@@ -1,0 +1,140 @@
+.profile_body {
+    background-image: url("/img/cover1.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 140px;
+    text-align: center;
+}
+
+.profile_wrapper {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+}
+
+#your_profile {
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+#edit_button {
+    color: var(--light);
+    margin-top: 10px;
+}
+
+#save_button {
+    margin-top: 10px;
+}
+
+#edit_profile_form {
+    max-width: 90vw;
+    margin: 2% auto;
+    border-radius: 8px;
+    align-items: center;
+    margin-bottom: 3vw;
+    padding-bottom: 6vw;
+    padding-top: 5vw;
+    background-image: url("/img/cover2.jpg");
+    background-size: cover;
+}
+
+.profile_body.row {
+    width: 100%;
+}
+
+.label_profile {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.input_profile {
+    width: 25%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input_profile.edit-mode {
+    border-color: #ccc;
+}
+.button_profile {
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#profile_picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    width: 100px;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .input_profile {
+        width: 80%;
+    }
+
+    #profile_picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile_body {
+        margin: 0;
+        offset: 0;
+        margin-top: 140px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .input_profile,
+    .label_profile,
+    .button_profile {
+        width: 90%;
+    }
+}
+/* #upload_button {
+    background-color: #007bff;
+} */
+
+.profile-picture-container {
+    position: relative;
+}
+
+#profile_picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+#profile_picture_upload {
+    position: absolute;
+
+    opacity: 0;
+}
+
+.upload-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 8px 16px;
+    background-color: var(--dark-gray);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
